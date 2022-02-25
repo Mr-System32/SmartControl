@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgrownd"
+    tools:context=".ADD_Device">
+
+
+    <ImageView
+        android:id="@+id/IMG_Backword"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="@drawable/addbackgraong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:background="@drawable/mmnmdpi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/TXT_port"
+        app:layout_constraintStart_toStartOf="@+id/TXT_port"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_port">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Power Calculation"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="26dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/powericon"
+            android:elevation="10dp"
+            android:padding="0dp"
+            app:iconGravity="textStart" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="11dp"
+        android:text="Status     "
+        android:textOff="OFF"
+        android:textOn="ON"
+        app:layout_constraintBottom_toTopOf="@+id/BTN_ADD"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/D_IMG"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/addphoto"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/IMG_Backword" />
+
+    <EditText
+        android:id="@+id/TXT_name"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rectangle"
+        android:elevation="1000dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/D_IMG"
+        app:layout_constraintStart_toStartOf="@+id/D_IMG"
+        app:layout_constraintTop_toBottomOf="@+id/D_IMG" />
+
+    <EditText
+        android:id="@+id/TXT_power"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Power"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/TXT_name"
+        app:layout_constraintStart_toStartOf="@+id/TXT_name"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_name" />
+
+    <EditText
+        android:id="@+id/TXT_port"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Port"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/TXT_power"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/TXT_power"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_power" />
+
+    <Button
+        android:id="@+id/BTN_ADD"
+        android:layout_width="134dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@mipmap/login3hdpi"
+        android:onClick="ADD"
+        android:text="ADD"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Status"
+        app:layout_constraintStart_toStartOf="@+id/Status"
+        app:layout_constraintTop_toBottomOf="@+id/Status" />
+
+    <ImageView
+        android:id="@+id/IMG_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backwordw" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

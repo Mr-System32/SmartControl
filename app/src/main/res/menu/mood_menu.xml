@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Add"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Add Mood" />
+    <item
+        android:id="@+id/Edit"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Edit" />
+    <item
+        android:id="@+id/Delete"
+        android:icon="@android:drawable/ic_delete"
+        android:title="Delete" />
+    <item
+        android:id="@+id/Rename"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="Rename" />
+</menu>
