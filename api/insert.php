@@ -17,7 +17,7 @@ if ( isset($_POST['D_Name']) && isset($_POST['D_status']) && isset($_POST['D_Pow
     $D_Photo= $_POST['D_Photo'];
     
       $path = "Device_Photo/".time()."$User_ID.jpeg";
-    $finalPath = "https://ashrefabd.000webhostapp.com/api/".$path;
+    $finalPath = "https://dentalflutter.000webhostapp.com/".$path;
     
     // Include data base connect class
     $filepath = realpath (dirname(__FILE__));
@@ -28,7 +28,8 @@ if ( isset($_POST['D_Name']) && isset($_POST['D_status']) && isset($_POST['D_Pow
     $db = new DB_CONNECT();
  
     // Fire SQL query to insert data in weather
-    $result = mysql_query("INSERT INTO `Device`(`D_Name`, `D_status`, `D_Power`, `D_Port`, `User_ID`, `D_Photo`) VALUES ('$D_Name','$D_status','$D_Power','$D_Port','$User_ID','$finalPath')");
+    $result = mysql_query("INSERT INTO `Device`(`D_Name`, `D_status`, `D_Power`, `D_Port`, `User_ID`, `D_Photo`, `D_Hours`, `D_DateON`) VALUES ('$D_Name','$D_status','$D_Power','$D_Port','$User_ID','$finalPath','','')");
+ 
  
     // Check for succesfull execution of query
     if ($result) {

@@ -31,7 +31,7 @@ if (isset($_GET['ID']) && isset($_GET['D_Name']) && isset($_GET['D_status']) && 
     if ($result) {
         // successfully updation of temp (temperature)
         $response["success"] = 1;
-        $response["message"] = "Weather Data successfully updated.";
+        $response["message"] = " Data successfully updated.";
  
         // Show JSON response
         echo json_encode($response);

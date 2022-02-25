@@ -17,7 +17,11 @@ $db = new DB_CONNECT();
     $User_ID = $_GET['User_ID'];
     $Mood_ID = $_GET['Mood_ID'];
  // Fire SQL query to get all data from weather
-$result = mysql_query("Call setMood('$User_ID','$Mood_ID')") or die(mysql_error());
+$result = mysql_query("UPDATE `Device` d
+set d.D_status = CASE
+   WHEN   d.Id IN (select Device_Mood.Device_ID from Device_Mood WHERE Device_Mood.Mood_ID = '$Mood_ID') THEN 1
+   ELSE 0
+END") or die(mysql_error());
  
   $response["success"] = 1;
     $response["message"] = "Mood Is Set ";
